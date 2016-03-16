@@ -14,7 +14,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500|Crimson+Text:400,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,700|Raleway:400,200,500,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
@@ -25,21 +25,22 @@
 
     <header class="main-header">
         <div class="wrap-logo">
-            <img src="images/logo-header.png">
+            <img src="images/logo-header-white.png" ng-show="darkTheme">
+            <img src="images/logo-header.png" ng-show="!darkTheme">
         </div>
-        <nav class="wrap-nav">
+        <nav class="wrap-nav" ng-class="{'dark': darkTheme}">
 
             <div class="nav-item">
-                <a href="">Home</a>
+                <a ui-sref="home">home</a>
             </div>
             <div class="nav-item">
-                <a href="">What we do</a>
+                <a ui-sref="what-we-do">what we do</a>
             </div>
             <div class="nav-item">
-                <a href="">About us</a>
+                <a ui-sref="about">about us</a>
             </div>
             <div class="nav-item">
-                <a href="">Contact</a>
+                <a ui-sref="contact">contact</a>
             </div>
 
         </nav>
@@ -49,6 +50,12 @@
 
     <!-- Add your site or application content here -->
     <div class="container" ng-view=""></div>
+
+    <footer class="main-footer">
+
+        <p>&copy; 2016 - Quantum Thinking - All Rights Reserved</p>
+
+    </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -91,7 +98,10 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/home.js"></script>
+        <script src="scripts/controllers/whatWeDo.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/contact.js"></script>
         <!-- endbuild -->
 </body>
 </html>

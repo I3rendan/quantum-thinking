@@ -1,10 +1,13 @@
 'use strict';
 
 angular.module('quantumThinkingApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('AboutCtrl', function ($scope, $rootScope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+    $rootScope.darkTheme = false;
+
   });

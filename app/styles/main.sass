@@ -1,6 +1,10 @@
 @import variables
 @import buttons
 @import home
+@import whatWeDo
+
+*, *:before
+    box-sizing: border-box
 
 html
     height: 100%
@@ -8,7 +12,7 @@ html
 body
     padding: 0
     margin: 0
-    font-family: 'Roboto', sans-serif
+    font-family: 'Raleway', sans-serif
     font-size: 1em
 
 h1, h2, h3, h4, h5
@@ -16,8 +20,47 @@ h1, h2, h3, h4, h5
     font-weight: 300
     color: $color-primary
 
+h1
+    font-size: 3em
+
+h2
+    font-size: 2.67em
+
+h3
+    font-size: 2.25em
+
+h4
+    font-size: 1.75em
+
+h5
+    font-size: 1.5em
+
+a
+    color: $color-primary
+    text-decoration: none
+
+    &:hover
+        text-decoration: underline
+
+button, .qt-btn
+    font-family: 'Raleway', sans-serif
+
+.large-text
+    font-size: 1.25em
+    line-height: 1.15
+    display: block
+
+.larger-text
+    font-size: 1.5em
+    line-height: 1.15
+    display: block
+
 .main-header
-    padding: 0.5em 1.5em
+    padding: 0.25em 1.5em
+    float: left
+    width: 100%
+    position: relative
+    z-index: 3
 
 .wrap-logo
     float: left
@@ -26,16 +69,23 @@ h1, h2, h3, h4, h5
         height: 4em
 .wrap-nav
     float: right
+    margin-top: 0.67em
 
     .nav-item
         display: inline-block
         margin-left: 1em
         padding: 1em 0.5em
 
+    &.dark
+        .nav-item a
+            color: $color-white
+
 .wrap-content
     display: inline-block
     width: 100%
     position: relative
+    text-align: center
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15)
 
     .content-bg
         position: absolute
@@ -43,6 +93,19 @@ h1, h2, h3, h4, h5
         width: 100%
         overflow: hidden
         z-index: 0
+        background: $color-white
+
+        &.primary
+            background: $color-primary
+
+        &.secondary
+            background: $color-secondary
+
+        &.accent
+            background: $color-accent
+
+        &.dark
+            background: $color-dark
 
         > img
             position: relative
@@ -52,7 +115,20 @@ h1, h2, h3, h4, h5
 
     .content-inner
         display: inline-block
-        width: calc(100% - 7em)
+        width: 100%
         position: relative
         z-index: 1
-        padding: 3.5em
+        padding: 3.5em 5em
+
+        h1, h2, h3, h4, h5
+            margin-top: 0
+
+.main-footer
+    position: relative
+    z-index: 1
+    padding: 1em
+    background: $color-white
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.15)
+
+        
+
