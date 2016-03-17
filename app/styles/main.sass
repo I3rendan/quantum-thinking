@@ -1,7 +1,9 @@
 @import variables
 @import buttons
 @import home
-@import whatWeDo
+@import whatwedo
+@import about
+@import contact
 
 *, *:before
     box-sizing: border-box
@@ -38,35 +40,49 @@ h5
 a
     color: $color-primary
     text-decoration: none
+    transition: color ease $trans-speed
 
     &:hover
-        text-decoration: underline
+        color: $color-accent
 
 button, .qt-btn
     font-family: 'Raleway', sans-serif
 
 .large-text
     font-size: 1.25em
-    line-height: 1.15
+    line-height: 1.5
     display: block
 
 .larger-text
     font-size: 1.5em
-    line-height: 1.15
+    line-height: 1.33
     display: block
 
 .main-header
-    padding: 0.25em 1.5em
+    padding: 0.25em 2.25em
     float: left
     width: 100%
     position: relative
     z-index: 3
 
+    &.dark
+        .nav-item a
+            color: $color-white
+
+            &:hover
+                color: lighten($color-accent, 10%)
+
+        .wrap-logo img
+            height: 4.5em
+            margin-top: 1em
+
 .wrap-logo
     float: left
 
-    > img
-        height: 4em
+    img
+        height: 3.5em
+        margin-top: 0.5em
+
 .wrap-nav
     float: right
     margin-top: 0.67em
@@ -75,10 +91,6 @@ button, .qt-btn
         display: inline-block
         margin-left: 1em
         padding: 1em 0.5em
-
-    &.dark
-        .nav-item a
-            color: $color-white
 
 .wrap-content
     display: inline-block
@@ -118,7 +130,7 @@ button, .qt-btn
         width: 100%
         position: relative
         z-index: 1
-        padding: 3.5em 5em
+        padding: 4em 6em
 
         h1, h2, h3, h4, h5
             margin-top: 0
