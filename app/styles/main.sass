@@ -17,6 +17,15 @@ body
     font-family: 'Raleway', sans-serif
     font-size: 1em
 
+    @media screen and (max-width: $lgscreen)
+        font-size: 0.925em
+
+    @media screen and (max-width: $mdscreen)
+        font-size: 0.85em
+
+    @media screen and (max-width: $smscreen)
+        font-size: 0.75em
+
 h1, h2, h3, h4, h5
     font-family: 'Crimson Text', serif
     font-weight: 300
@@ -70,6 +79,7 @@ button, .qt-btn
     width: 100%
     position: relative
     z-index: 3
+    background: fade-out(white, 0.25)
 
     &.dark
         .nav-item a
@@ -103,6 +113,7 @@ button, .qt-btn
     position: relative
     text-align: center
     box-shadow: 0 3px 6px rgba(0,0,0,0.15)
+    background: $color-lightest
 
     .content-bg
         position: absolute
@@ -136,6 +147,18 @@ button, .qt-btn
         position: relative
         z-index: 1
         padding: 4em 6em
+
+        @media screen and (max-width: $lgscreen)
+            padding: 3em 5em
+            font-size: 0.925em
+
+        @media screen and (max-width: $mdscreen)
+            padding: 2em 4em
+            font-size: 0.85em
+
+        @media screen and (max-width: $smscreen)
+            padding: 1.5em 3em
+            font-size: 0.75em
 
         h1, h2, h3, h4, h5
             margin-top: 0
