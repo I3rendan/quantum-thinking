@@ -9,5 +9,6 @@ angular.module('quantumThinkingApp')
     ];
 
     $rootScope.darkTheme = false;
+    $rootScope.homeTheme = false;
 
   });
