@@ -1,5 +1,6 @@
 @import variables
 @import buttons
+@import content
 @import home
 @import whatwedo
 @import about
@@ -63,7 +64,7 @@ button, .qt-btn
     display: block
 
 .larger-text
-    font-size: 1.5em
+    font-size: 1.33em
     line-height: 1.33
     display: block
 
@@ -94,10 +95,24 @@ button, .qt-btn
 
     &.home
         .wrap-logo img
-            height: 5.5em
+            height: 6.33em
+            margin-bottom: -1em
+
+            @media screen and (max-width: $mdscreen)
+                height: 5.5em
 
 .wrap-logo
     float: left
+    font-size: 1em
+
+    @media screen and (max-width: $lgscreen)
+        font-size: 0.925em
+
+    @media screen and (max-width: $mdscreen)
+        font-size: 0.85em
+
+    @media screen and (max-width: $smscreen)
+        font-size: 0.75em
 
     img
         height: 4.25em
@@ -106,66 +121,14 @@ button, .qt-btn
     float: right
     margin-top: 0.67em
 
+    @media screen and (max-width: $smscreen)
+        margin-top: 1.5em
+        font-size: 0.925em
+
     .nav-item
         display: inline-block
         margin-left: 1em
         padding: 1em 0.5em
-
-.wrap-content
-    display: inline-block
-    width: 100%
-    position: relative
-    text-align: center
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15)
-    background: $color-lightest
-
-    .content-bg
-        position: absolute
-        height: 100%
-        width: 100%
-        overflow: hidden
-        z-index: 0
-        background: $color-white
-
-        &.primary
-            background: $color-primary
-
-        &.secondary
-            background: $color-secondary
-
-        &.accent
-            background: $color-accent
-
-        &.dark
-            background: $color-dark
-
-        > img
-            position: relative
-            min-height: 100%
-            min-width: 100%
-            max-width: 100%
-
-    .content-inner
-        display: inline-block
-        width: 100%
-        position: relative
-        z-index: 1
-        padding: 4em 6em
-
-        @media screen and (max-width: $lgscreen)
-            padding: 3em 5em
-            font-size: 0.925em
-
-        @media screen and (max-width: $mdscreen)
-            padding: 2em 4em
-            font-size: 0.85em
-
-        @media screen and (max-width: $smscreen)
-            padding: 1.5em 3em
-            font-size: 0.75em
-
-        h1, h2, h3, h4, h5
-            margin-top: 0
 
 .main-footer
     position: relative
@@ -176,6 +139,3 @@ button, .qt-btn
     text-align: center
     font-size: 0.85em
     color: $color-primary
-
-        
-

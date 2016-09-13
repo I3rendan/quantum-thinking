@@ -1,0 +1,59 @@
+.wrap-content
+    display: inline-block
+    width: 100%
+    position: relative
+    text-align: center
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15)
+    background: $color-lightest
+
+    .content-bg
+        position: absolute
+        height: 100%
+        width: 100%
+        overflow: hidden
+        z-index: 0
+        background: $color-white
+
+        &:after
+            content: ""
+            position: absolute
+            height: 100%
+            width: 100%
+            top: 0
+            left: 0
+            background-size: cover
+            background-position: center center
+
+        &.primary
+            background: $color-primary
+
+        &.secondary
+            background: $color-secondary
+
+        &.accent
+            background: $color-accent
+
+        &.dark
+            background: $color-dark
+
+    .content-inner
+        display: inline-block
+        width: 100%
+        position: relative
+        z-index: 1
+        padding: 3em 6em
+
+        @media screen and (max-width: $lgscreen)
+            padding: 3em 5em
+            font-size: 0.925em
+
+        @media screen and (max-width: $mdscreen)
+            padding: 2.25em 4em
+            font-size: 0.85em
+
+        @media screen and (max-width: $smscreen)
+            padding: 2em
+            font-size: 0.75em
+
+        h1, h2, h3, h4, h5
+            margin-top: 0
