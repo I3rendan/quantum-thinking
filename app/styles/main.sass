@@ -80,7 +80,15 @@ button, .qt-btn
     width: 100%
     position: relative
     z-index: 3
-    //background: fade-out(white, 0.75)
+    
+    @media screen and (max-width: $lgscreen)
+        padding: 0.25em 2em
+
+    @media screen and (max-width: $mdscreen)
+        padding: 0.25em 1.5em
+
+    @media screen and (max-width: $smscreen)
+        padding: 0.25em 0.75em
 
     &.dark
         .nav-item a
@@ -95,11 +103,14 @@ button, .qt-btn
 
     &.home
         .wrap-logo img
-            height: 6.33em
+            height: 6.67em
             margin-bottom: -1em
 
             @media screen and (max-width: $mdscreen)
                 height: 5.5em
+
+            @media screen and (max-width: $xsscreen)
+                height: 3.67em
 
 .wrap-logo
     float: left
@@ -123,12 +134,15 @@ button, .qt-btn
 
     @media screen and (max-width: $smscreen)
         margin-top: 1.5em
-        font-size: 0.925em
+        font-size: 0.85em
 
     .nav-item
         display: inline-block
         margin-left: 1em
         padding: 1em 0.5em
+
+        @media screen and (max-width: $smscreen)
+            margin-left: 0.5em
 
 .main-footer
     position: relative
