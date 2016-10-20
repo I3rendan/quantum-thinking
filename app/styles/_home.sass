@@ -20,6 +20,16 @@
   @media screen and (max-width: $smscreen)
     margin-top: -8.5em
 
+  .content-bg:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background: linear-gradient(120deg, rgba(white, 0.33) 10%, transparent 60%)
+    z-index: 2
+
   .content-bg:after
     opacity: 0.925
     background-image: url("../images/hero-27.jpg")
@@ -85,6 +95,15 @@
 
   .content-inner
     padding: 3em 8em
+
+    @media screen and (max-width: $lgscreen)
+      padding: 3em 6em
+
+    @media screen and (max-width: $mdscreen)
+      padding: 3em 4em
+
+    @media screen and (max-width: $mdscreen)
+      padding: 2em 1.5em 3em
     
     h2
       color: $color-accent
@@ -99,6 +118,15 @@
   .content-inner
     padding: 4em
 
+    @media screen and (max-width: $lgscreen)
+      padding: 3.5em
+
+    @media screen and (max-width: $mdscreen)
+      padding: 3em
+
+    @media screen and (max-width: $smscreen)
+      padding: 3em 1em
+
 .home-bottom
   .content-bg:after
     opacity: 0.33
@@ -106,6 +134,15 @@
 
   .content-inner
     padding: 4em 5.5em
+
+    @media screen and (max-width: $lgscreen)
+      padding: 4em 5em
+
+    @media screen and (max-width: $mdscreen)
+      padding: 3.5em 4em
+
+    @media screen and (max-width: $smscreen)
+      padding: 3em 2.5em
 
     h3
       font-size: 1.75em
