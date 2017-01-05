@@ -8,7 +8,7 @@ angular.module('quantumThinkingApp')
       'Karma'
     ];
 
-    $rootScope.darkTheme = true;
+    //$rootScope.darkTheme = true;
     $rootScope.homeTheme = true;
 
   });

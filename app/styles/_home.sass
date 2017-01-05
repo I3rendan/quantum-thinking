@@ -14,7 +14,6 @@
     white-space: nowrap
 
 .home-intro
-  margin-top: -6.5em
   margin-bottom: -1em
 
   @media screen and (max-width: $smscreen)
@@ -27,12 +26,12 @@
     left: 0
     height: 100%
     width: 100%
-    background: linear-gradient(120deg, rgba(white, 0.33) 10%, transparent 60%)
+    //background: linear-gradient(120deg, rgba(white, 0.5) 15%, transparent 60%)
     z-index: 2
 
   .content-bg:after
     opacity: 0.925
-    background-image: url("../images/hero-27.jpg")
+    background-image: url("../images/hero-33.jpg")
 
   .content-hero-text
     position: relative
@@ -42,13 +41,13 @@
       //color: $color-primary-light
       color: $color-white
       float: right
-      width: 50%
+      width: calc(50% - 1.5em)
       margin-right: 1.5em
       text-align: right
       margin-top: 2.75em
       margin-bottom: 2em
       font-style: italic
-      font-size: 3.33em
+      font-size: 3em
 
       @media screen and (max-width: $lgscreen)
         margin-bottom: 2em
